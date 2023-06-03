@@ -1,0 +1,16 @@
+[
+    {
+        "url": "https://chainlist.org/",
+        "type": "tool",
+        "description": "Helping users connect to EVM powered networks",
+        "details": null,
+        "tags": ["evm"]
+    },
+    {
+        "url": "https://ethernaut.openzeppelin.com/",
+        "type": "platform",
+        "description": "Web3/Solidity based wargame inspired by overthewire.org",
+        "details": null,
+        "tags": ["evm", "security", "ctf"]
+    }
+]
