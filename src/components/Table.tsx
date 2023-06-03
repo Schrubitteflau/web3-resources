@@ -76,8 +76,7 @@ export default function ResourcesTable(): JSX.Element {
         return <Tag value={tag} style={{background: getColorOfTag(tag)}} />;
     };
 
-    const typeBodyTemplate = (row: Resource) => {
-        const type: string = row.type;
+    const typeBodyTemplate = ({ type }: Resource) => {
         return <Tag value={getLabelOfType(type)} style={{background: getColorOfType(type)}} />;
     }
 
@@ -97,7 +96,15 @@ export default function ResourcesTable(): JSX.Element {
     };
 
     const rightToolbarTemplate = () => {
-        return <Button label="Export" icon="pi pi-upload" className="p-button-help" onClick={() => alert("NOT IMPLEMENTED YET")} />;
+        const href: string = `data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(RESOURCES))}`;
+        return (
+            <a href={href} download="resources.json">
+                <Button
+                    label="Export JSON" icon="pi pi-upload"
+                    className="p-button-help"
+                />
+            </a>
+        );
     };
 
     const header = renderHeader();
