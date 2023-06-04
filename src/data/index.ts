@@ -45,6 +45,10 @@ const RESOURCE_TYPES: Record<string, ResourceTypeMetadata> = {
     library: {
         label: "Library",
         color: "#b79d94"
+    },
+    document: {
+        label: "Document (spreadsheet, etc.)",
+        color: "#0d5d56"
     }
 };
 

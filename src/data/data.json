@@ -124,5 +124,47 @@
         "description": "LaborX is a blockchain-based jobs platform that helps clients connect with freelancers from a vast global pool of Web3 talent.",
         "details": null,
         "tags": ["job", "work", "freelance"]
+    },
+    {
+        "url": "https://docs.google.com/spreadsheets/d/1f_9c8P28dXG5K6DXlHGeTQUww5K8Ft6GgCKYZ8scjb0",
+        "type": "document",
+        "description": "All airdrop rumors",
+        "details": null,
+        "tags": ["airdrop"]
+    },
+    {
+        "url": "https://defillama.com/airdrops",
+        "type": "platform",
+        "description": "Tokenless protocols that may airdrop",
+        "details": null,
+        "tags": ["airdrop"]
+    },
+    {
+        "url": "https://airdrops.io/",
+        "type": "platform",
+        "description": "Crypto Airdrops List",
+        "details": null,
+        "tags": ["airdrop"]
+    },
+    {
+        "url": "https://earni.fi/",
+        "type": "platform",
+        "description": "Find unclaimed airdrops",
+        "details": null,
+        "tags": ["airdrop"]
+    },
+    {
+        "url": "https://docs.google.com/spreadsheets/d/1lEFQWjPXEdIijcHEIAKTML7pd5iiGHyUqKyw1DCx37o",
+        "type": "document",
+        "description": "Listes Airdrops potentiels",
+        "details": null,
+        "tags": ["airdrop"]
+    },
+    {
+        "url": "https://cosmospug.com/airdrops/",
+        "type": "platform",
+        "description": "Airdrops on the Cosmos ecosystem",
+        "details": null,
+        "tags": ["airdrop", "cosmos"]
     }
 ]
