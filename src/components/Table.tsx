@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { FilterMatchMode, FilterOperator } from 'primereact/api';
-import { DataTable, DataTableFilterMeta } from 'primereact/datatable';
+import { DataTable, DataTableFilterMeta, DataTableOperatorFilterMetaData, DataTableFilterMetaData, DataTableStateEvent } from 'primereact/datatable';
 import { Column, ColumnFilterElementTemplateOptions } from 'primereact/column';
 import { InputText } from 'primereact/inputtext';
-import { Dropdown } from 'primereact/dropdown';
+import { Dropdown, DropdownChangeEvent } from 'primereact/dropdown';
 import { Button } from 'primereact/button';
 import { Tag } from 'primereact/tag';
-import { MultiSelect } from 'primereact/multiselect';
+import { MultiSelect, MultiSelectChangeEvent } from 'primereact/multiselect';
 import { Toolbar } from 'primereact/toolbar';
+import { FilterService } from 'primereact/api';
+import { AutoComplete, AutoCompleteChangeEvent, AutoCompleteCompleteEvent } from 'primereact/autocomplete';
 
 import RESOURCES, { RESOURCE_TYPES_ARRAY, ALL_TAGS, getColorOfTag, getLabelOfType, getColorOfType } from "../data";
 import type { Resource, ResourceType } from "../data";
@@ -18,10 +20,48 @@ import "primeicons/primeicons.css"; // Icons
 
 
 export default function ResourcesTable(): JSX.Element {
-    const [filters, setFilters] = useState<DataTableFilterMeta>({});
-    const [globalFilterValue, setGlobalFilterValue] = useState<string>("");
+    const defaultFilters: DataTableFilterMeta = {
+        global: { value: null, matchMode: FilterMatchMode.CONTAINS },
+        url: { value: null, matchMode: FilterMatchMode.CONTAINS },
+        description: { value: null, matchMode: FilterMatchMode.CONTAINS },
+        type: { value: null, matchMode: FilterMatchMode.IN },
+        tags: { operator: FilterOperator.OR, constraints: [{ value: null, matchMode: FilterMatchMode.CONTAINS }] }
+    };
 
-    useEffect(() => initFilters(), []);
+    const [filters, setFilters] = useState<DataTableFilterMeta>(defaultFilters);
+    const [globalFilterValue, setGlobalFilterValue] = useState<string>("");
+    const [selectedTags, setSelectedTags] = useState<Array<string>>([]);
+    const [filteredTags, setFilteredTags] = useState<Array<string>>([]);
+
+    useEffect(() => {
+        FilterService.register("custom_tags", (rowTags: Array<string>, tag: string): boolean => rowTags.includes(tag));
+    }, []);
+
+    const resetFilters = () => {
+        setFilters(defaultFilters);
+        setGlobalFilterValue("");
+        setSelectedTags([]);
+    }
+
+    function updateSelectedTags(newSelectedTags: Array<string>): void {
+        setSelectedTags(newSelectedTags);
+
+        if (newSelectedTags.length === 0) {
+            setFilters({
+                ...filters,
+                tags: defaultFilters.tags
+            });
+        }
+        else {
+            setFilters({
+                ...filters,
+                tags: {
+                    operator: FilterOperator.AND,
+                    constraints: newSelectedTags.map((tag: string) => ({ value: tag, matchMode: FilterMatchMode.CUSTOM }))
+                }
+            });
+        }
+    }
 
     const onGlobalFilterChange: React.ChangeEventHandler<HTMLInputElement> = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
@@ -33,19 +73,10 @@ export default function ResourcesTable(): JSX.Element {
         setGlobalFilterValue(value);
     };
 
-    const initFilters = () => {
-        setFilters({
-            global: { value: null, matchMode: FilterMatchMode.CONTAINS },
-            type: { value: null, matchMode: FilterMatchMode.IN },
-            tags: { operator: FilterOperator.OR, constraints: [{ value: null, matchMode: FilterMatchMode.CONTAINS }] },
-        });
-        setGlobalFilterValue("");
-    };
-
     const renderHeader = () => {
         return (
             <div className="flex justify-content-between">
-                <Button type="button" icon="pi pi-filter-slash" label="Clear" outlined onClick={initFilters} />
+                <Button type="button" icon="pi pi-filter-slash" label="Clear" outlined onClick={resetFilters} />
                 <span className="p-input-icon-left">
                     <i className="pi pi-search" />
                     <InputText value={globalFilterValue} onChange={onGlobalFilterChange} placeholder="Keyword Search" />
@@ -55,23 +86,24 @@ export default function ResourcesTable(): JSX.Element {
     };
 
     const tagsBodyTemplate = (row: Resource) => {
-        return row.tags.map((tag: string) => {
-            // TODO See : https://primereact.org/chip/
-            return <Tag key={tag} value={tag} style={{background: getColorOfTag(tag)}} />;
-        });
+        return row.tags.map((tag: string) =>
+            <Tag key={tag} value={tag} style={{background: getColorOfTag(tag)}} />
+        );
     };
 
     const tagsFilterTemplate = (options: ColumnFilterElementTemplateOptions) => {
-        return <Dropdown
-            value={options.value} options={ALL_TAGS}
-            onChange={(e) => options.filterCallback(e.value, options.index)}
-            itemTemplate={tagsItemTemplate}
-            placeholder="Select One"
-            className="p-column-filter"
-            showClear
-        />;
+        return (
+            <AutoComplete
+                multiple value={selectedTags}
+                suggestions={filteredTags}
+                completeMethod={search}
+                placeholder="Type tags here"
+                onChange={(e: AutoCompleteChangeEvent) => updateSelectedTags(e.value)}
+            />
+        );
     };
 
+    // TODO
     const tagsItemTemplate = (tag: string) => {
         return <Tag value={tag} style={{background: getColorOfTag(tag)}} />;
     };
@@ -86,14 +118,18 @@ export default function ResourcesTable(): JSX.Element {
                 value={options.value}
                 options={RESOURCE_TYPES_ARRAY}
                 itemTemplate={(type: ResourceType) => <Tag value={type.label} style={{background: type.color}} />}
-                onChange={(e) => {options.filterApplyCallback(e.value)}}
+                onChange={(e: MultiSelectChangeEvent) => {options.filterApplyCallback(e.value)}}
                 optionLabel="label"
                 placeholder="Any"
                 className="p-column-filter"
-                maxSelectedLabels={3}
+                maxSelectedLabels={4}
             />
         );
     };
+
+    useEffect(() => {
+        console.log("filters changed", filters);
+    }, [filters]);
 
     const rightToolbarTemplate = () => {
         const href: string = `data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(RESOURCES))}`;
@@ -107,6 +143,15 @@ export default function ResourcesTable(): JSX.Element {
         );
     };
 
+    const search = ({ query }: AutoCompleteCompleteEvent): void => {
+        if (query.trim().length === 0) {
+            setFilteredTags(ALL_TAGS);
+        }
+        else {
+            setFilteredTags(ALL_TAGS.filter((tag: string) => tag.toLowerCase().startsWith(query.toLowerCase())));
+        }
+    }
+
     const header = renderHeader();
 
     return (
@@ -118,7 +163,8 @@ export default function ResourcesTable(): JSX.Element {
                 header={header} showGridlines
                 paginator rows={10}
                 style={{ minWidth: '1000px' }}
-                filters={filters} filterDisplay="menu" globalFilterFields={["url", "description"]}
+                filters={filters} filterDisplay="row" globalFilterFields={["url", "description"]}
+                onFilter={(e: DataTableStateEvent) => setFilters(e.filters)}
                 emptyMessage="No resource found."
             >
 
@@ -131,7 +177,7 @@ export default function ResourcesTable(): JSX.Element {
 
                 <Column
                     field="description" header="Description"
-                    filter filterPlaceholder="Search by description"
+                    filter filterField='description'  filterPlaceholder="Search by description"
                     showFilterMenu={false}
                     style={{ minWidth: '14rem', width: '25%' }}
                 />
@@ -139,7 +185,7 @@ export default function ResourcesTable(): JSX.Element {
                 <Column
                     field="type" header="Type"
                     filter filterField="type" filterElement={typeFilterTemplate}
-                    showFilterMenuOptions={false} filterMenuStyle={{ width: '14rem' }}
+                    showFilterMenu={false}
                     body={typeBodyTemplate}
                     style={{ minWidth: '14rem', width: '25%' }}
                 />
@@ -147,7 +193,7 @@ export default function ResourcesTable(): JSX.Element {
                 <Column
                     field="tags" header="Tags"
                     filter filterField="tags" filterElement={tagsFilterTemplate}
-                    filterMenuStyle={{ width: '14rem' }}
+                    showFilterMenu={false}
                     body={tagsBodyTemplate}
                     style={{ minWidth: '12rem', width: '25%' }}
                 />
