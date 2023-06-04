@@ -18,17 +18,24 @@ import type { Resource, ResourceType } from "../data";
 import "primereact/resources/themes/lara-light-indigo/theme.css"; // Theme
 import "primereact/resources/primereact.min.css"; // Core
 import "primeicons/primeicons.css"; // Icons
+import ExternalLink from './ExternalLink';
 
 
 function TypeBodyTemplate({ type }: Resource): JSX.Element {
     return <Tag value={getLabelOfType(type)} style={{background: getColorOfType(type)}} />;
 }
 
-function TagsBodyTemplate(row: Resource): Array<JSX.Element> {
-    return row.tags.map((tag: string) =>
+function TagsBodyTemplate({ tags }: Resource): Array<JSX.Element> {
+    return tags.map((tag: string) =>
         <Tag key={tag} value={tag} style={{background: getColorOfTag(tag)}} />
     );
 };
+
+function URLBodyTemplate({ url }: Resource): JSX.Element {
+    return (
+        <ExternalLink href={url}>{url}</ExternalLink>
+    )
+}
 
 function TypeFilterTemplate(options: ColumnFilterElementTemplateOptions): JSX.Element {
     return (
@@ -40,7 +47,7 @@ function TypeFilterTemplate(options: ColumnFilterElementTemplateOptions): JSX.El
             optionLabel="label"
             placeholder="Any"
             className="p-column-filter"
-            maxSelectedLabels={4}
+            maxSelectedLabels={1}
         />
     );
 };
@@ -71,10 +78,6 @@ export default function ResourcesTable(): JSX.Element {
     const [selectedTags, setSelectedTags] = useState<Array<string>>([]);
     const [filteredTags, setFilteredTags] = useState<Array<string>>([]);
     const [tagsMatchOperator, setTagsMatchOperator] = useState<"And" | "Or">("Or");
-
-    useEffect(() => {
-        console.log("filters changed", filters);
-    }, [filters]);
 
     useEffect(() => {
         FilterService.register("custom_tags", (rowTags: Array<string>, tag: string): boolean => rowTags.includes(tag));
@@ -160,10 +163,10 @@ export default function ResourcesTable(): JSX.Element {
             <Toolbar className="mb-4" right={RightToolbarTemplate}></Toolbar>
 
             <DataTable
+                id="main-table"
                 value={RESOURCES} dataKey="url"
                 header={header} showGridlines
                 paginator rows={10}
-                style={{ minWidth: '1000px' }}
                 filters={filters} filterDisplay="row" globalFilterFields={["url", "description"]}
                 onFilter={(e: DataTableStateEvent) => setFilters(e.filters)}
                 emptyMessage="No resource found."
@@ -172,15 +175,9 @@ export default function ResourcesTable(): JSX.Element {
                 <Column
                     field="url" header="URL"
                     filter filterPlaceholder="Search by URL"
+                    body={URLBodyTemplate}
                     showFilterMenu={false}
-                    style={{ minWidth: '12rem', width: '25%' }}
-                />
-
-                <Column
-                    field="description" header="Description"
-                    filter filterField='description' filterPlaceholder="Search by description"
-                    showFilterMenu={false}
-                    style={{ minWidth: '14rem', width: '25%' }}
+                    style={{ width: '20%' }}
                 />
 
                 <Column
@@ -188,7 +185,14 @@ export default function ResourcesTable(): JSX.Element {
                     filter filterField="type" filterElement={TypeFilterTemplate}
                     showFilterMenu={false}
                     body={TypeBodyTemplate}
-                    style={{ minWidth: '14rem', width: '25%' }}
+                    style={{ width: '10%' }}
+                />
+
+                <Column
+                    field="description" header="Description"
+                    filter filterField='description' filterPlaceholder="Search by description"
+                    showFilterMenu={false}
+                    style={{ width: '40%' }}
                 />
 
                 <Column
@@ -196,7 +200,7 @@ export default function ResourcesTable(): JSX.Element {
                     filter filterField="tags" filterElement={tagsFilterTemplate}
                     showFilterMenu={false}
                     body={TagsBodyTemplate}
-                    style={{ minWidth: '12rem', width: '25%' }}
+                    style={{ width: '30%' }}
                 />
             </DataTable>
         </div>

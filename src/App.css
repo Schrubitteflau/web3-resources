@@ -12,11 +12,15 @@
 }
 
 .App-footer {
-  position: fixed;
+  position: sticky;
   left: 0;
   bottom: 0;
   width: 100%;
   background-color: rgb(231, 225, 225);
   color: black;
   text-align: center;
+}
+
+#main-table {
+  width: 1200px;
 }
