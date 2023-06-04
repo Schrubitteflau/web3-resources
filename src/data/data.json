@@ -12,5 +12,40 @@
         "description": "Web3/Solidity based wargame inspired by overthewire.org",
         "details": null,
         "tags": ["evm", "security", "ctf"]
+    },
+    {
+        "url": "https://github.com/FrancescoXX/free-Web3-resources",
+        "type": "repository",
+        "description": "A list of FREE resources to make Web3 accessible to everyone.",
+        "details": null,
+        "tags": []
+    },
+    {
+        "url": "https://github.com/ccxt/ccxt",
+        "type": "library",
+        "description": "A JavaScript / TypeScript / Python / C# / PHP cryptocurrency trading API with support for more than 100 bitcoin/altcoin exchanges",
+        "details": null,
+        "tags": ["exchange", "API"]
+    },
+    {
+        "url": "https://tenderly.co/",
+        "type": "platform",
+        "description": "Enabling Web3 developers to build, test, monitor, and operate smart contracts from their inception to mass adoption.",
+        "details": "This example shows how the state has been alternated by a DEX buy transaction : https://dashboard.tenderly.co/tx/bsc/0x4c67c66b3566e787c52df8768f3b0eea67ed5133aaebeb362192cdb782ef30fd/state-diff",
+        "tags": ["evm", "debugger", "debug", "transaction_debug", "profiling", "simulate"]
+    },
+    {
+        "url": "https://ethtx.info/",
+        "type": "tool",
+        "description": "EthTx is an open source decoder of blockchain transactions that is made freely available to the Ethereum Community as a Python library in public PyPi index (project page).",
+        "details": null,
+        "tags": ["evm", "debugger", "debug", "transaction_debug"]
+    },
+    {
+        "url": "https://tokenicons.org/",
+        "type": "library",
+        "description": "A free, up-to-date collection of ERC-20 icons.",
+        "details": null,
+        "tags": ["icons"]
     }
 ]

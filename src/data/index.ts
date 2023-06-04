@@ -1,4 +1,3 @@
-import { RenameInfoSuccess } from "typescript";
 import RAW_DATA from "./data.json";
 
 interface ResourceTypeMetadata {
@@ -38,6 +37,10 @@ const RESOURCE_TYPES: Record<string, ResourceTypeMetadata> = {
     article: {
         label: "Article",
         color: "#253d5b"
+    },
+    library: {
+        label: "Library",
+        color: "#b79d94"
     }
 };
 // 5th color of the palette : #b79d94 (https://coolors.co/c6878f-b79d94-969696-67697c-253d5b)
