@@ -1,15 +1,16 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FilterMatchMode, FilterOperator } from 'primereact/api';
-import { DataTable, DataTableFilterMeta, DataTableOperatorFilterMetaData, DataTableFilterMetaData, DataTableStateEvent } from 'primereact/datatable';
+import { DataTable, DataTableFilterMeta, DataTableStateEvent } from 'primereact/datatable';
 import { Column, ColumnFilterElementTemplateOptions } from 'primereact/column';
 import { InputText } from 'primereact/inputtext';
-import { Dropdown, DropdownChangeEvent } from 'primereact/dropdown';
 import { Button } from 'primereact/button';
 import { Tag } from 'primereact/tag';
 import { MultiSelect, MultiSelectChangeEvent } from 'primereact/multiselect';
 import { Toolbar } from 'primereact/toolbar';
 import { FilterService } from 'primereact/api';
 import { AutoComplete, AutoCompleteChangeEvent, AutoCompleteCompleteEvent } from 'primereact/autocomplete';
+import { SelectButton, SelectButtonChangeEvent } from 'primereact/selectbutton';
+import { Chips } from 'primereact/chips';
 
 import RESOURCES, { RESOURCE_TYPES_ARRAY, ALL_TAGS, getColorOfTag, getLabelOfType, getColorOfType } from "../data";
 import type { Resource, ResourceType } from "../data";
@@ -18,6 +19,43 @@ import "primereact/resources/themes/lara-light-indigo/theme.css"; // Theme
 import "primereact/resources/primereact.min.css"; // Core
 import "primeicons/primeicons.css"; // Icons
 
+
+function TypeBodyTemplate({ type }: Resource): JSX.Element {
+    return <Tag value={getLabelOfType(type)} style={{background: getColorOfType(type)}} />;
+}
+
+function TagsBodyTemplate(row: Resource): Array<JSX.Element> {
+    return row.tags.map((tag: string) =>
+        <Tag key={tag} value={tag} style={{background: getColorOfTag(tag)}} />
+    );
+};
+
+function TypeFilterTemplate(options: ColumnFilterElementTemplateOptions): JSX.Element {
+    return (
+        <MultiSelect
+            value={options.value}
+            options={RESOURCE_TYPES_ARRAY}
+            itemTemplate={(type: ResourceType) => <Tag value={type.label} style={{background: type.color}} />}
+            onChange={(e: MultiSelectChangeEvent) => {options.filterApplyCallback(e.value)}}
+            optionLabel="label"
+            placeholder="Any"
+            className="p-column-filter"
+            maxSelectedLabels={4}
+        />
+    );
+};
+
+function RightToolbarTemplate(): JSX.Element {
+    const href: string = `data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(RESOURCES))}`;
+    return (
+        <a href={href} download="resources.json">
+            <Button
+                label="Export JSON" icon="pi pi-upload"
+                className="p-button-help"
+            />
+        </a>
+    );
+};
 
 export default function ResourcesTable(): JSX.Element {
     const defaultFilters: DataTableFilterMeta = {
@@ -32,21 +70,33 @@ export default function ResourcesTable(): JSX.Element {
     const [globalFilterValue, setGlobalFilterValue] = useState<string>("");
     const [selectedTags, setSelectedTags] = useState<Array<string>>([]);
     const [filteredTags, setFilteredTags] = useState<Array<string>>([]);
+    const [tagsMatchOperator, setTagsMatchOperator] = useState<"And" | "Or">("Or");
+
+    useEffect(() => {
+        console.log("filters changed", filters);
+    }, [filters]);
 
     useEffect(() => {
         FilterService.register("custom_tags", (rowTags: Array<string>, tag: string): boolean => rowTags.includes(tag));
     }, []);
 
-    const resetFilters = () => {
+    function resetFilters(): void {
         setFilters(defaultFilters);
         setGlobalFilterValue("");
         setSelectedTags([]);
     }
 
-    function updateSelectedTags(newSelectedTags: Array<string>): void {
-        setSelectedTags(newSelectedTags);
+    function searchTags({ query }: AutoCompleteCompleteEvent): void {
+        if (query.trim().length === 0) {
+            setFilteredTags(ALL_TAGS);
+        }
+        else {
+            setFilteredTags(ALL_TAGS.filter((tag: string) => tag.toLowerCase().startsWith(query.toLowerCase())));
+        }
+    }
 
-        if (newSelectedTags.length === 0) {
+    useEffect((): void => {
+        if (selectedTags.length === 0) {
             setFilters({
                 ...filters,
                 tags: defaultFilters.tags
@@ -56,12 +106,12 @@ export default function ResourcesTable(): JSX.Element {
             setFilters({
                 ...filters,
                 tags: {
-                    operator: FilterOperator.AND,
-                    constraints: newSelectedTags.map((tag: string) => ({ value: tag, matchMode: FilterMatchMode.CUSTOM }))
+                    operator: tagsMatchOperator === "And" ? FilterOperator.AND : FilterOperator.OR,
+                    constraints: selectedTags.map((tag: string) => ({ value: tag, matchMode: FilterMatchMode.CUSTOM }))
                 }
             });
         }
-    }
+    }, [selectedTags, tagsMatchOperator]);
 
     const onGlobalFilterChange: React.ChangeEventHandler<HTMLInputElement> = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
@@ -85,78 +135,29 @@ export default function ResourcesTable(): JSX.Element {
         );
     };
 
-    const tagsBodyTemplate = (row: Resource) => {
-        return row.tags.map((tag: string) =>
-            <Tag key={tag} value={tag} style={{background: getColorOfTag(tag)}} />
-        );
-    };
-
     const tagsFilterTemplate = (options: ColumnFilterElementTemplateOptions) => {
         return (
-            <AutoComplete
-                multiple value={selectedTags}
-                suggestions={filteredTags}
-                completeMethod={search}
-                placeholder="Type tags here"
-                onChange={(e: AutoCompleteChangeEvent) => updateSelectedTags(e.value)}
-            />
-        );
-    };
-
-    // TODO
-    const tagsItemTemplate = (tag: string) => {
-        return <Tag value={tag} style={{background: getColorOfTag(tag)}} />;
-    };
-
-    const typeBodyTemplate = ({ type }: Resource) => {
-        return <Tag value={getLabelOfType(type)} style={{background: getColorOfType(type)}} />;
-    }
-
-    const typeFilterTemplate = (options: ColumnFilterElementTemplateOptions) => {
-        return (
-            <MultiSelect
-                value={options.value}
-                options={RESOURCE_TYPES_ARRAY}
-                itemTemplate={(type: ResourceType) => <Tag value={type.label} style={{background: type.color}} />}
-                onChange={(e: MultiSelectChangeEvent) => {options.filterApplyCallback(e.value)}}
-                optionLabel="label"
-                placeholder="Any"
-                className="p-column-filter"
-                maxSelectedLabels={4}
-            />
-        );
-    };
-
-    useEffect(() => {
-        console.log("filters changed", filters);
-    }, [filters]);
-
-    const rightToolbarTemplate = () => {
-        const href: string = `data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(RESOURCES))}`;
-        return (
-            <a href={href} download="resources.json">
-                <Button
-                    label="Export JSON" icon="pi pi-upload"
-                    className="p-button-help"
+            <>
+                <SelectButton
+                    value={tagsMatchOperator}
+                    onChange={(e: SelectButtonChangeEvent) => setTagsMatchOperator(e.value)} options={['And', 'Or']}
                 />
-            </a>
+                <AutoComplete
+                    multiple value={selectedTags}
+                    suggestions={filteredTags}
+                    completeMethod={searchTags}
+                    placeholder="Type tags here"
+                    onChange={(e: AutoCompleteChangeEvent) => setSelectedTags(e.value)}
+                />
+            </>
         );
     };
-
-    const search = ({ query }: AutoCompleteCompleteEvent): void => {
-        if (query.trim().length === 0) {
-            setFilteredTags(ALL_TAGS);
-        }
-        else {
-            setFilteredTags(ALL_TAGS.filter((tag: string) => tag.toLowerCase().startsWith(query.toLowerCase())));
-        }
-    }
 
     const header = renderHeader();
 
     return (
         <div className="card">
-            <Toolbar className="mb-4" right={rightToolbarTemplate}></Toolbar>
+            <Toolbar className="mb-4" right={RightToolbarTemplate}></Toolbar>
 
             <DataTable
                 value={RESOURCES} dataKey="url"
@@ -177,16 +178,16 @@ export default function ResourcesTable(): JSX.Element {
 
                 <Column
                     field="description" header="Description"
-                    filter filterField='description'  filterPlaceholder="Search by description"
+                    filter filterField='description' filterPlaceholder="Search by description"
                     showFilterMenu={false}
                     style={{ minWidth: '14rem', width: '25%' }}
                 />
 
                 <Column
                     field="type" header="Type"
-                    filter filterField="type" filterElement={typeFilterTemplate}
+                    filter filterField="type" filterElement={TypeFilterTemplate}
                     showFilterMenu={false}
-                    body={typeBodyTemplate}
+                    body={TypeBodyTemplate}
                     style={{ minWidth: '14rem', width: '25%' }}
                 />
 
@@ -194,7 +195,7 @@ export default function ResourcesTable(): JSX.Element {
                     field="tags" header="Tags"
                     filter filterField="tags" filterElement={tagsFilterTemplate}
                     showFilterMenu={false}
-                    body={tagsBodyTemplate}
+                    body={TagsBodyTemplate}
                     style={{ minWidth: '12rem', width: '25%' }}
                 />
             </DataTable>
