@@ -47,5 +47,82 @@
         "description": "A free, up-to-date collection of ERC-20 icons.",
         "details": null,
         "tags": ["icons"]
+    },
+    {
+        "url": "https://uniswapv3book.com/",
+        "type": "book",
+        "description": "Uniswap V3 Development Book",
+        "details": null,
+        "tags": ["dex", "defi", "uniswap", "uniswapv3"]
+    },
+    {
+        "url": "https://hackenproof.com/",
+        "type": "platform",
+        "description": "Expert Bug Bounty Platform for Crypto Projects",
+        "details": null,
+        "tags": ["security", "bug_bounty", "audit"]
+    },
+    {
+        "url": "https://immunefi.com/",
+        "type": "platform",
+        "description": "Web3's leading bug bounty platform, protecting $60 billion in user funds",
+        "details": null,
+        "tags": ["security", "bug_bounty", "audit"]
+    },
+    {
+        "url": "https://code4rena.com/",
+        "type": "platform",
+        "description": "Secure your smart contracts.",
+        "details": null,
+        "tags": ["security", "bug_bounty", "audit"]
+    },
+    {
+        "url": "https://www.useweb3.xyz/jobs",
+        "type": "platform",
+        "description": "Find the latest Web3, Solidity, Ethereum, developer, engineering, product & software jobs in the Web3 ecosystem.",
+        "details": null,
+        "tags": ["job", "work"]
+    },
+    {
+        "url": "https://cryptojobslist.com/",
+        "type": "platform",
+        "description": "The Biggest List of Crypto, Web3 and Blockchain Jobs",
+        "details": null,
+        "tags": ["job", "work"]
+    },
+    {
+        "url": "https://cryptocurrencyjobs.co/",
+        "type": "platform",
+        "description": "The leading job board for blockchain jobs and cryptocurrency jobs",
+        "details": null,
+        "tags": ["job", "work"]
+    },
+    {
+        "url": "https://www.onchainjobs.io/",
+        "type": "platform",
+        "description": "Spécialiste de l'emploi et du recrutement Blockchain",
+        "details": null,
+        "tags": ["job", "work"]
+    },
+    {
+        "url": "https://devitjobs.uk/jobs/Blockchain/all",
+        "type": "platform",
+        "description": "Blockchain & Crypto jobs in the UK",
+        "details": "See https://workonblockchain.com/",
+        "tags": ["job", "work"]
+    },
+    {
+        "url": "https://crypto.jobs/",
+        "type": "platform",
+        "description": "Getting you from Web2 to Web3",
+        "details": null,
+        "tags": ["job", "work"]
+    },
+    {
+        "url": "https://laborx.com/",
+        "type": "platform",
+        "description": "LaborX is a blockchain-based jobs platform that helps clients connect with freelancers from a vast global pool of Web3 talent.",
+        "details": null,
+        "tags": ["job", "work", "freelance"]
     }
 ]

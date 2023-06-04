@@ -38,12 +38,15 @@ const RESOURCE_TYPES: Record<string, ResourceTypeMetadata> = {
         label: "Article",
         color: "#253d5b"
     },
+    book: {
+        label: "Book",
+        color: "#564d65"
+    },
     library: {
         label: "Library",
         color: "#b79d94"
     }
 };
-// 5th color of the palette : #b79d94 (https://coolors.co/c6878f-b79d94-969696-67697c-253d5b)
 
 function recordToArray<RecordKey extends string | number | symbol, RecordValue extends {}, NewKey extends string>(record: Record<RecordKey, RecordValue>, keyPropertyName: NewKey): Array<RecordValue & {[key in NewKey]: RecordKey}> {
     const arr: Array<RecordValue & {[key in NewKey]: RecordKey}> = [];
