@@ -166,5 +166,33 @@
         "description": "Airdrops on the Cosmos ecosystem",
         "details": null,
         "tags": ["airdrop", "cosmos"]
+    },
+    {
+        "url": "https://docs.google.com/spreadsheets/d/1oPq7dt6hsntvmAhgPc8H0pcbUnbi7V6kX-FIOOVmlOk",
+        "type": "document",
+        "description": "Crypto Funds - Master Contact List",
+        "details": null,
+        "tags": ["contact", "funds", "VCs"]
+    },
+    {
+        "url": "https://bounties.gitcoin.co/hackathons",
+        "type": "document",
+        "description": "Build a bunch of cool stuff, learn new tech, support the open source ecosystem, and earn cash and prizes!",
+        "details": null,
+        "tags": ["hackathon", "build"]
+    },
+    {
+        "url": "https://www.blockchain-council.org/",
+        "type": "platform",
+        "description": "Embrace Blockchain, AI, and Web3 with a range of certifications offered by the Blockchain Council, designed to suit enthusiasts from all backgrounds.",
+        "details": null,
+        "tags": ["certification"]
+    },
+    {
+        "url": "https://cryptoconsortium.org/",
+        "type": "platform",
+        "description": "The CryptoCurrency Certification Consortium (C4) is a non-profit organization that creates unbiased education and certifications.",
+        "details": null,
+        "tags": ["certification"]
     }
 ]
