@@ -12,7 +12,7 @@ That project uses :atom_symbol: [React](https://react.dev/) and the component li
 
 # :handshake: Contribution
 
-I would be very happy to receive your contributions, about improvements of the website, or new resources to add. To do so, feel free to open an issue or to create a pull request :smile:
+I would be very happy to receive any kind of contribution, about improvements on the website, of the content of this readme (feel free to point out any wording issues!) or new resources to add. To do so, feel free to open an issue or to create a pull request :smile:
 
 # :desktop_computer: Run locally
 
