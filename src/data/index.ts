@@ -49,6 +49,22 @@ const RESOURCE_TYPES: Record<string, ResourceTypeMetadata> = {
     document: {
         label: "Document (spreadsheet, etc.)",
         color: "#0d5d56"
+    },
+    newsletter: {
+        label: "Newletter",
+        color: "TODO"
+    },
+    newspaper: {
+        label: "Newspaper",
+        color: "TODO"
+    },
+    wiki: {
+        label: "Wiki",
+        color: "TODO"
+    },
+    blog: {
+        label: "Blog",
+        color: "TODO"
     }
 };
 

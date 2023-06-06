@@ -77,6 +77,13 @@
         "tags": ["security", "bug_bounty", "audit"]
     },
     {
+        "url": "https://docs.google.com/spreadsheets/d/1e5FdX0nvSAZe1S9Vhl6BdVpb5gnvSu7QkWltKUP3JPY",
+        "type": "document",
+        "description": "Know Your Worth in Web3 - data about people working in web3 related jobs",
+        "details": null,
+        "tags": ["work", "job"]
+    },
+    {
         "url": "https://www.useweb3.xyz/jobs",
         "type": "platform",
         "description": "Find the latest Web3, Solidity, Ethereum, developer, engineering, product & software jobs in the Web3 ecosystem.",
@@ -89,7 +96,7 @@
         "description": "Browse 32,233 blockchain jobs in web3 at 5,706 projects. Filter the best remote crypto jobs by salary, location, and skills.",
         "details": null,
         "tags": ["job", "work"]
-    }
+    },
     {
         "url": "https://cryptojobslist.com/",
         "type": "platform",
@@ -228,7 +235,7 @@
         "type": "platform",
         "description": "Build a Web3 career the quickest way possible.",
         "details": null,
-        "tags": ["learn", "courses", "evm", "aggregator", "diverse_resources"]
+        "tags": ["learn", "courses", "evm", "aggregator", "various_topics"]
     },
     {
         "url": "https://university.alchemy.com/",
@@ -284,7 +291,7 @@
         "type": "platform",
         "description": "Learn web3 - most recent web3 tutorials, courses, videos and articles",
         "details": null,
-        "tags": ["learn", "courses", "videos", "articles", "evm", "aggregator", "diverse_resources"]
+        "tags": ["learn", "courses", "videos", "articles", "evm", "aggregator", "various_topics"]
     },
     {
         "url": "https://cryptozombies.io/",
@@ -299,5 +306,101 @@
         "description": "An Educational Sandbox For Web3... And Much More.",
         "details": null,
         "tags": ["learn", "sandbox"]
+    },
+    {
+        "url": "https://www.web3.university/",
+        "type": "platform",
+        "description": "Join 200,000+ students becoming web3 developers.",
+        "details": null,
+        "tags": ["learn", "bootcamps", "courses", "evm"]
+    },
+    {
+        "url": "https://remix.ethereum.org/?#activate=udapp,solidity,LearnEth",
+        "type": "platform",
+        "description": "Tutorials on Remix IDE",
+        "details": null,
+        "tags": ["learn", "tutorials", "evm"]
+    },
+    {
+        "url": "https://w1nt3r.mirror.xyz/enD1dorw5t2u_s13MthnsqnhqW03WMY8T7ASdRwxDQg",
+        "type": "article",
+        "description": "w1nt3r.eth - How to get better at Solidity",
+        "details": null,
+        "tags": ["learn", "solidity"]
+    },
+    {
+        "url": "https://github.com/x676f64/secureum-mind_map/",
+        "type": "repository",
+        "description": "Central Repository for the Epoch 0 coursework and quizzes. Contains all the content, cross-referenced and linked.",
+        "details": null,
+        "tags": ["learn", "solidity", "evm", "security"]
+    },
+    {
+        "url": "https://github.com/mektigboy/evm-chad/",
+        "type": "repository",
+        "description": "A curated list of the hottest and most fresh resources to become an EVM chad",
+        "details": null,
+        "tags": ["learn", "solidity", "evm", "security"]
+    },
+    {
+        "url": "https://curious.xyz/",
+        "type": "platform",
+        "description": "Ask us anything related to Web3 – we'll answer within a day.",
+        "details": null,
+        "tags": ["learn", "ask", "various_topics"]
+    },
+    {
+        "url": "https://eips.ethereum.org/",
+        "type": "book",
+        "description": "Every Ethereum EIP, you need to know the most important ones (1559, 779, 140, 7, 1014, 3529, 3198, 3541, 3675, 695, etc.)",
+        "details": null,
+        "tags": ["evm"]
+    },
+    {
+        "url": "https://tldr.tech/crypto",
+        "type": "newletter",
+        "description": "Keep Up With Crypto in 5 Minutes",
+        "details": null,
+        "tags": ["various_topics"]
+    },
+    {
+        "url": "https://www.securities.io/",
+        "type": "newspaper",
+        "description": "",
+        "details": null,
+        "tags": ["various_topics", "economy"]
+    },
+    {
+        "url": "https://cryptowiki.me/wiki/Main_Page",
+        "type": "wiki",
+        "description": "The free crypto encyclopedia for you to DYOR.",
+        "details": null,
+        "tags": ["various_topics"]
+    },
+    {
+        "url": "https://wiki.rugdoc.io/",
+        "type": "wiki",
+        "description": "The DeFi Wikipedia",
+        "details": null,
+        "tags": ["various_topics", "defi"]
+    },
+    {
+        "url": "https://bnbsmartchain.com/",
+        "type": "blog",
+        "description": "",
+        "details": null,
+        "tags": ["bsc", "bnb_smart_chain"]
+    },
+    {
+        "url": "https://vitalik.eth.limo/",
+        "type": "blog",
+        "description": "Vitalik Buterin's website",
+        "details": null,
+        "tags": ["various_topics"]
+    },
+    {
+        "url": "https://dyor-crypto.fandom.com/wiki/DYOR_Crypto_Wiki",
+        "type": "wiki",
+        "description": ""
     }
 ]
