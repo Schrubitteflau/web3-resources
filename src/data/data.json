@@ -84,6 +84,13 @@
         "tags": ["job", "work"]
     },
     {
+        "url": "https://web3.career/",
+        "type": "platform",
+        "description": "Browse 32,233 blockchain jobs in web3 at 5,706 projects. Filter the best remote crypto jobs by salary, location, and skills.",
+        "details": null,
+        "tags": ["job", "work"]
+    }
+    {
         "url": "https://cryptojobslist.com/",
         "type": "platform",
         "description": "The Biggest List of Crypto, Web3 and Blockchain Jobs",
@@ -194,5 +201,103 @@
         "description": "The CryptoCurrency Certification Consortium (C4) is a non-profit organization that creates unbiased education and certifications.",
         "details": null,
         "tags": ["certification"]
+    },
+    {
+        "url": "https://solidity-by-example.org/",
+        "type": "book",
+        "description": "An introduction to Solidity with simple examples",
+        "details": null,
+        "tags": ["evm", "solidity", "learn", "examples"]
+    },
+    {
+        "url": "https://www.useweb3.xyz/",
+        "type": "platform",
+        "description": "Explore the latest resources and get familiar with the core concepts and fundamentals. Learning from tutorials, courses, books, videos or code challenges and start building!",
+        "details": null,
+        "tags": ["evm", "solidity", "learn", "books", "videos", "courses", "tutorials", "challenges"]
+    },
+    {
+        "url": "https://openquest.xyz/",
+        "type": "platform",
+        "description": "Learn to code in Web3. Build in less than 60s.",
+        "details": null,
+        "tags": ["evm", "solana", "near", "polygon", "learn", "courses"]
+    },
+    {
+        "url": "https://learnweb3.io/",
+        "type": "platform",
+        "description": "Build a Web3 career the quickest way possible.",
+        "details": null,
+        "tags": ["learn", "courses", "evm", "aggregator", "diverse_resources"]
+    },
+    {
+        "url": "https://university.alchemy.com/",
+        "type": "platform",
+        "description": "Fast track your web3 career through courses, projects and code. Totally free.",
+        "details": null,
+        "tags": ["learn", "evm", "courses", "bootcamps"]
+    },
+    {
+        "url": "https://academy.developerdao.com/",
+        "type": "platform",
+        "description": "D_D Academy is on a mission to educate coders to the exciting possibilities of building web3 Open Source.",
+        "details": null,
+        "tags": ["learn", "evm", "courses", "challenges"]
+    },
+    {
+        "url": "https://speedrunethereum.com/",
+        "type": "platform",
+        "description": "Learn how to build on Ethereum; the superpowers and the gotchas.",
+        "details": null,
+        "tags": ["learn", "evm", "courses", "challenges"]
+    },
+    {
+        "url": "https://ethspring.com/",
+        "type": "platform",
+        "description": "Open Ethereum Learning Resources",
+        "details": null,
+        "tags": ["learn", "evm", "books"]
+    },
+    {
+        "url": "https://app.rabbithole.gg/",
+        "type": "platform",
+        "description": "Earn tokens by using crypto applications",
+        "details": null,
+        "tags": ["learn", "defi", "dapp", "quests", "rewards", "earn"]
+    },
+    {
+        "url": "https://app.banklessacademy.com/",
+        "type": "platform",
+        "description": "Bankless Academy is on a mission to ensure every web3 Explorer is ready for their crypto-verse voyage.",
+        "details": null,
+        "tags": ["learn", "quests", "rewards", "courses", "challenges"]
+    },
+    {
+        "url": "https://tranqui.xyz/posts/100-days-of-code",
+        "type": "article",
+        "description": "tranqui.eth - Condensed Guide for Learning Web3 Development in 100 Days",
+        "details": null,
+        "tags": ["learn", "roadmap", "evm"]
+    },
+    {
+        "url": "https://web3.career/learn-web3/all",
+        "type": "platform",
+        "description": "Learn web3 - most recent web3 tutorials, courses, videos and articles",
+        "details": null,
+        "tags": ["learn", "courses", "videos", "articles", "evm", "aggregator", "diverse_resources"]
+    },
+    {
+        "url": "https://cryptozombies.io/",
+        "type": "platform",
+        "description": "Learn to Code Blockchain DApps by Building Simple Games",
+        "details": null,
+        "tags": ["learn", "courses", "challenges", "evm"]
+    },
+    {
+        "url": "eth.build",
+        "type": "platform",
+        "description": "An Educational Sandbox For Web3... And Much More.",
+        "details": null,
+        "tags": ["learn", "sandbox"]
     }
 ]
