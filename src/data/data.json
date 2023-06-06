@@ -352,13 +352,13 @@
     {
         "url": "https://eips.ethereum.org/",
         "type": "book",
-        "description": "Every Ethereum EIP, you need to know the most important ones (1559, 779, 140, 7, 1014, 3529, 3198, 3541, 3675, 695, etc.)",
-        "details": null,
+        "description": "Every Ethereum EIP",
+        "details": "You need to know the most important ones, there are various articles about that topic",
         "tags": ["evm"]
     },
     {
         "url": "https://tldr.tech/crypto",
-        "type": "newletter",
+        "type": "newsletter",
         "description": "Keep Up With Crypto in 5 Minutes",
         "details": null,
         "tags": ["various_topics"]
@@ -397,10 +397,5 @@
         "description": "Vitalik Buterin's website",
         "details": null,
         "tags": ["various_topics"]
-    },
-    {
-        "url": "https://dyor-crypto.fandom.com/wiki/DYOR_Crypto_Wiki",
-        "type": "wiki",
-        "description": ""
     }
 ]
