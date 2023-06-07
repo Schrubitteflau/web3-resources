@@ -7,13 +7,6 @@
         "tags": ["evm"]
     },
     {
-        "url": "https://ethernaut.openzeppelin.com/",
-        "type": "platform",
-        "description": "Web3/Solidity based wargame inspired by overthewire.org",
-        "details": null,
-        "tags": ["evm", "security", "ctf"]
-    },
-    {
         "url": "https://github.com/FrancescoXX/free-Web3-resources",
         "type": "repository",
         "description": "A list of FREE resources to make Web3 accessible to everyone.",
@@ -397,5 +390,103 @@
         "description": "Vitalik Buterin's website",
         "details": null,
         "tags": ["various_topics"]
+    },
+    {
+        "url": "https://getblock.io/",
+        "type": "platform",
+        "description": "Superior Node Infrastructure for Building dApps",
+        "details": null,
+        "tags": ["node_provider"]
+    },
+    {
+        "url": "https://www.ankr.com/",
+        "type": "platform",
+        "description": "The fastest, most reliable Web3 infrastructure.",
+        "details": null,
+        "tags": ["node_provider"]
+    },
+    {
+        "url": "https://www.quicknode.com/",
+        "type": "platform",
+        "description": "The Blockchain Development Platform. Learn. Build. Scale.",
+        "details": null,
+        "tags": ["node_provider"]
+    },
+    {
+        "url": "https://www.infura.io/",
+        "type": "platform",
+        "description": "Build Scale Disrupt",
+        "details": null,
+        "tags": ["node_provider"]
+    },
+    {
+        "url": "https://ethereumnodes.com/",
+        "type": "platform",
+        "description": "Public Ethereum Nodes",
+        "details": null,
+        "tags": ["node_provider"]
+    },
+    {
+        "url": "https://github.com/kadenzipfel/gas-optimizations",
+        "type": "repository",
+        "description": "List of smart contract optimizations in solidity",
+        "details": null,
+        "tags": ["evm", "learn", "solidity", "gas", "gas_optimization"]
+    },
+    {
+        "url": "https://ethernaut.openzeppelin.com/",
+        "type": "platform",
+        "description": "The Ethernaut is a Web3/Solidity based wargame played in the Ethereum Virtual Machine",
+        "details": null,
+        "tags": ["evm", "solidity", "security", "ctf", "challenges"]
+    },
+    {
+        "url": "https://capturetheether.com/",
+        "type": "platform",
+        "description": "The game of Ethereum smart contract security",
+        "details": null,
+        "tags": ["evm", "solidity", "security", "ctf", "challenges"]
+    },
+    {
+        "url": "https://etherhack.positive.com/",
+        "type": "platform",
+        "description": "Contract hacking challenges",
+        "details": null,
+        "tags": ["evm", "solidity", "security", "ctf", "challenges"]
+    },
+    {
+        "url": "https://ctf.mevsec.com/",
+        "type": "platform",
+        "description": "Contract hacking challenges",
+        "details": null,
+        "tags": ["evm", "solidity", "security", "ctf", "challenges"]
+    },
+    {
+        "url": "https://www.damnvulnerabledefi.xyz/",
+        "type": "platform",
+        "description": "",
+        "details": null,
+        "tags": ["evm", "solidity", "security", "ctf", "challenges"]
+    },
+    {
+        "url": "https://www.ctfprotocol.com/",
+        "type": "platform",
+        "description": "The Proof Of Hack Protocol its a game where you can learn by doing, earn NFTs trophies, validate your skills and brag with your anons frens.",
+        "details": null,
+        "tags": ["evm", "solidity", "security", "ctf", "challenges"]
+    },
+    {
+        "url": "https://ciphershastra.com/",
+        "type": "platform",
+        "description": "A place where you can enhance your Security Skills by solving and learning from CTF like challenges.",
+        "details": null,
+        "tags": ["evm", "solidity", "security", "ctf", "challenges"]
+    },
+    {
+        "url": "https://ethereumhacker.com/",
+        "type": "platform",
+        "description": "Contract hacking challenges",
+        "details": null,
+        "tags": ["evm", "solidity", "security", "ctf", "challenges"]
     }
 ]
