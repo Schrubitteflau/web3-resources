@@ -167,7 +167,7 @@ export default function ResourcesTable(): JSX.Element {
                 value={RESOURCES} dataKey="url"
                 header={header} showGridlines
                 paginator rows={10}
-                filters={filters} filterDisplay="row" globalFilterFields={["url", "description"]}
+                filters={filters} filterDisplay="row" globalFilterFields={["url", "description", "details"]}
                 onFilter={(e: DataTableStateEvent) => setFilters(e.filters)}
                 emptyMessage="No resource found."
             >

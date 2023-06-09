@@ -65,6 +65,10 @@ const RESOURCE_TYPES: Record<string, ResourceTypeMetadata> = {
     blog: {
         label: "Blog",
         color: "TODO"
+    },
+    company: {
+        label: "Company",
+        color: "TODO"
     }
 };
 

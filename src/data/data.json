@@ -488,5 +488,82 @@
         "description": "Contract hacking challenges",
         "details": null,
         "tags": ["evm", "solidity", "security", "ctf", "challenges"]
+    },
+    {
+        "url": "https://blog.pessimistic.io/",
+        "type": "blog",
+        "description": "Pessimistic's blog",
+        "details": null,
+        "tags": ["learn", "evm", "security", "various_topics"]
+    },
+    {
+        "url": "https://github.com/Elpacos/quickfork",
+        "type": "repository",
+        "description": "Foundry template to run Proof of Concept (PoC) fork tests on any EVM compatible chain.",
+        "details": null,
+        "tags": ["evm", "template"]
+    },
+    {
+        "url": "https://github.com/Anugrahsr/Awesome-web3-Security",
+        "type": "repository",
+        "description": "A curated list of web3Security materials and resources For Pentesters and Bug Hunters.",
+        "details": null,
+        "tags": ["evm", "roadmap", "learn", "various_topics", "security"]
+    },
+    {
+        "url": "https://github.com/saeidshirazi/Awesome-Smart-Contract-Security",
+        "type": "repository",
+        "description": "A curated list of Smart Contract Security materials and resources For Researchers",
+        "details": null,
+        "tags": ["evm", "learn", "roadmap", "various_topics", "security"]
+    },
+    {
+        "url": "https://github.com/SunWeb3Sec/DeFiHackLabs",
+        "type": "repository",
+        "description": "Reproduce DeFi hacked incidents using Foundry.",
+        "details": null,
+        "tags": ["evm", "learn", "defi", "security"]
+    },
+    {
+        "url": "https://github.com/stars/pcaversaccio/lists/ethereum-security",
+        "type": "repository",
+        "description": "A curated list of Ethereum security references, guidance, tools, and more.",
+        "details": null,
+        "tags": ["evm", "learn", "security", "various_topics"]
+    },
+    {
+        "url": "https://solidproof.io/",
+        "type": "company",
+        "description": "Solidproof - Blockchain Security",
+        "details": null,
+        "tags": ["evm", "security", "audit", "services"]
+    },
+    {
+        "url": "https://hacken.io/",
+        "type": "company",
+        "description": "Hacken - Trusted blockchain security auditor",
+        "details": "Learn how to audit by reading their public audit reports : https://hacken.io/audits/",
+        "tags": ["evm", "security", "audit", "services"]
+    },
+    {
+        "url": "https://hashex.org/",
+        "type": "company",
+        "description": "HashEx is an experienced team of auditors, developers, and consultants that sets DeFi security standards.",
+        "details": "Learn how to audit by reading their public audit reports : https://hashex.org/audits/",
+        "tags": ["evm", "security", "audit", "services"]
+    },
+    {
+        "url": "https://uniswapv3book.com/",
+        "type": "book",
+        "description": "Book guiding through the development of Uniswap V3",
+        "details": null,
+        "tags": ["evm", "learn", "solidity", "defi", "build"]
+    },
+    {
+        "url": "https://github.com/OffcierCia/DeFi-Developer-Road-Map",
+        "type": "repository",
+        "description": "DeFi Developer roadmap is a curated Developer handbook which includes a list of the best tools for DApps development, resources and references!",
+        "details": null,
+        "tags": ["evm", "learn", "solidity", "defi", "roadmap"]
     }
 ]
