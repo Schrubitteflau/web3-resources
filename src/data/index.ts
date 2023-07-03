@@ -69,6 +69,10 @@ const RESOURCE_TYPES: Record<string, ResourceTypeMetadata> = {
     company: {
         label: "Company",
         color: "TODO"
+    },
+    twitter_thread: {
+        label: "Twitter Thread",
+        color: "TODO"
     }
 };
 

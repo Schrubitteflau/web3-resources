@@ -56,6 +56,13 @@
         "tags": ["security", "bug_bounty", "audit"]
     },
     {
+        "url": "https://audits.sherlock.xyz/",
+        "type": "platform",
+        "description": "Smart contract audit contests",
+        "details": null,
+        "tags": ["security", "bug_bounty", "audit"]
+    },
+    {
         "url": "https://immunefi.com/",
         "type": "platform",
         "description": "Web3's leading bug bounty platform, protecting $60 billion in user funds",
@@ -74,12 +81,26 @@
         "type": "document",
         "description": "Know Your Worth in Web3 - data about people working in web3 related jobs",
         "details": null,
-        "tags": ["work", "job"]
+        "tags": ["job", "work"]
+    },
+    {
+        "url": "https://twitter.com/0xwillthetrill/status/1668271399721398273",
+        "type": "twitter_thread",
+        "description": "0xwillthetrill - Find a web3 job",
+        "details": null,
+        "tags": ["job", "work"]
     },
     {
         "url": "https://www.useweb3.xyz/jobs",
         "type": "platform",
         "description": "Find the latest Web3, Solidity, Ethereum, developer, engineering, product & software jobs in the Web3 ecosystem.",
+        "details": null,
+        "tags": ["job", "work"]
+    },
+    {
+        "url": "https://app.jobstash.xyz/",
+        "type": "platform",
+        "description": "Find web3 jobs",
         "details": null,
         "tags": ["job", "work"]
     },
@@ -378,9 +399,16 @@
         "tags": ["various_topics", "defi"]
     },
     {
+        "url": "https://blog.bytes032.xyz/",
+        "type": "blog",
+        "description": "bytes032's alpha",
+        "details": "A very interesting article whose title is self-explanatory : https://blog.bytes032.xyz/p/how-to-break-into-web3-while-working-full-time-job",
+        "tags": ["various_topics", "evm", "audit"]
+    },
+    {
         "url": "https://bnbsmartchain.com/",
         "type": "blog",
-        "description": "",
+        "description": "Blog about BNB chain",
         "details": null,
         "tags": ["bsc", "bnb_smart_chain"]
     },
@@ -553,6 +581,13 @@
         "tags": ["evm", "security", "audit", "services"]
     },
     {
+        "url": "https://github.com/spearbit/portfolio",
+        "type": "repository",
+        "description": "Public audit reports by Spearbit",
+        "details": null,
+        "tags": ["evm", "security", "audit"]
+    },
+    {
         "url": "https://uniswapv3book.com/",
         "type": "book",
         "description": "Book guiding through the development of Uniswap V3",
@@ -565,5 +600,33 @@
         "description": "DeFi Developer roadmap is a curated Developer handbook which includes a list of the best tools for DApps development, resources and references!",
         "details": null,
         "tags": ["evm", "learn", "solidity", "defi", "roadmap"]
+    },
+    {
+        "url": "https://messari.io/",
+        "type": "platform",
+        "description": "Messari helps businesses, compliance teams, builders, and investors navigate the crypto economy.",
+        "details": null,
+        "tags": ["aggregator", "dashboard", "data", "analysis", "research"]
+    },
+    {
+        "url": "https://wagmilabs.tools/",
+        "type": "platform",
+        "description": "The first all-in-one platform for NFT trading.",
+        "details": null,
+        "tags": ["dashboard", "nft", "trading"]
+    },
+    {
+        "url": "https://evm.storage/",
+        "type": "tool",
+        "description": "Dive deep into the storage of any contract on the Ethereum blockchain",
+        "details": null,
+        "tags": ["evm", "learn", "security"]
+    },
+    {
+        "url": "https://www.scale3labs.com/",
+        "type": "platform",
+        "description": "The web3 platform for monitoring and maintaining your blockchain networks and nodes",
+        "details": "Understand the complexities of each node upgrade and update your nodes seamlessly with one-click. Stay informed of network-wide events and announcements using a real-time feed. Be alerted if your node is unreachable. Get answers to frequently asked questions.",
+        "tags": ["nodes", "monitoring"]
     }
 ]
