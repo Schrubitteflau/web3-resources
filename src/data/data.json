@@ -628,5 +628,12 @@
         "description": "The web3 platform for monitoring and maintaining your blockchain networks and nodes",
         "details": "Understand the complexities of each node upgrade and update your nodes seamlessly with one-click. Stay informed of network-wide events and announcements using a real-time feed. Be alerted if your node is unreachable. Get answers to frequently asked questions.",
         "tags": ["nodes", "monitoring"]
+    },
+    {
+        "url": "https://github.com/Picodes/4naly3er",
+        "type": "repository",
+        "description": "Static smart contract code 4naly3er, by Judge Picodes",
+        "details": null,
+        "tags": ["solidity", "evm", "audit"]
     }
 ]

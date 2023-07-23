@@ -5,6 +5,10 @@ import ExternalLink from './components/ExternalLink';
 
 import './App.css';
 
+// The result is so ugly, maybe I can get some inspiration from that kind of design : https://airtable.com/shr8ksmsBN1Hgth0a/tblImAR1F0HzkLlKw
+// Check : https://alternativeto.net/software/airtable/?platform=self-hosted
+// Seems interesting : https://github.com/nocodb/nocodb
+
 function App() {
   return (
     <div className="App">

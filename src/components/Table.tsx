@@ -10,7 +10,6 @@ import { Toolbar } from 'primereact/toolbar';
 import { FilterService } from 'primereact/api';
 import { AutoComplete, AutoCompleteChangeEvent, AutoCompleteCompleteEvent } from 'primereact/autocomplete';
 import { SelectButton, SelectButtonChangeEvent } from 'primereact/selectbutton';
-import { Chips } from 'primereact/chips';
 
 import RESOURCES, { RESOURCE_TYPES_ARRAY, ALL_TAGS, getColorOfTag, getLabelOfType, getColorOfType } from "../data";
 import type { Resource, ResourceType } from "../data";
