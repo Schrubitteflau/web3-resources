@@ -584,7 +584,7 @@
         "url": "https://github.com/spearbit/portfolio",
         "type": "repository",
         "description": "Public audit reports by Spearbit",
-        "details": null,
+        "details": "See the auditing company : https://spearbit.com/",
         "tags": ["evm", "security", "audit"]
     },
     {
@@ -634,6 +634,27 @@
         "type": "repository",
         "description": "Static smart contract code 4naly3er, by Judge Picodes",
         "details": null,
-        "tags": ["solidity", "evm", "audit"]
+        "tags": ["solidity", "evm", "audit", "security"]
+    },
+    {
+        "url": "https://hacken.io/discover/how-to-become-a-smart-contract-auditor/",
+        "type": "article",
+        "description": "Very interesting article providing resources and steps on how to become an auditor",
+        "details": "1: Blockchain and smart contracts 101, 2: Programming experience, 3: Smart contract security best practices (SWC Registry, EthTrust Specifications for auditing standards), 4: Get auditing experience, 5: Stay up-to-date, 6: Obtain certifications (CCSSA CEP, CBP CBSP, CSCD)",
+        "tags": ["audit", "evm", "security"]
+    },
+    {
+        "url": "https://entethalliance.github.io/eta-registry/security-levels-spec.html",
+        "type": "book",
+        "description": "This document defines the requirements for EEA EthTrust Certification, a set of certifications that a smart contract has been reviewed and found not to have a defined set of security vulnerabilities",
+        "details": null,
+        "tags": ["audit", "solidity", "evm", "security"]
+    },
+    {
+        "url": "https://swcregistry.io/",
+        "type": "book",
+        "description": "Smart Contract Weakness Classification (SWC)",
+        "details": null,
+        "tags": ["audit", "solidity", "evm", "security"]
     }
 ]
