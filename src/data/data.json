@@ -21,6 +21,13 @@
         "tags": ["exchange", "API"]
     },
     {
+        "url": "https://docs.tribes.xyz/",
+        "type": "library",
+        "description": "TribesKit is a full-stack Chat and Wallet engine for your web3 app",
+        "details": null,
+        "tags": ["chat"]
+    },
+    {
         "url": "https://tenderly.co/",
         "type": "platform",
         "description": "Enabling Web3 developers to build, test, monitor, and operate smart contracts from their inception to mass adoption.",
