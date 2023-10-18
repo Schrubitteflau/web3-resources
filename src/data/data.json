@@ -663,5 +663,12 @@
         "description": "Smart Contract Weakness Classification (SWC)",
         "details": null,
         "tags": ["audit", "solidity", "evm", "security"]
+    },
+    {
+        "url": "https://www.blocknative.com/gas-estimator",
+        "type": "tool",
+        "description": "Web3's Most Accurate Gas Fee Prediction",
+        "details": "Includes a prediction for the next block, the Recent Gas Prices, and the Average Gas Price Heat Map",
+        "tags": ["gas", "analysis", "dashboard"]
     }
 ]
