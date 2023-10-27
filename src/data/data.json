@@ -670,5 +670,33 @@
         "description": "Web3's Most Accurate Gas Fee Prediction",
         "details": "Includes a prediction for the next block, the Recent Gas Prices, and the Average Gas Price Heat Map",
         "tags": ["gas", "analysis", "dashboard"]
+    },
+    {
+        "url": "https://github.com/Quillhash/EVM-Mastery",
+        "type": "repository",
+        "description": "List of resources to aid your journey of mastering Ethereum Virtual Machine",
+        "details": null,
+        "tags": ["evm"]
+    },
+    {
+        "url": "https://www.ziion.org/",
+        "type": "tool",
+        "description": "Like Kali Linux, for blockchains",
+        "details": "ZIION is the first open-source, end-to-end, pre-compiled, multi-architecture, multi-protocol blockchain security testing and development solution",
+        "tags": ["evm", "security", "audit"]
+    },
+    {
+        "url": "https://uniswaphooks.com/",
+        "type": "tool",
+        "description": "Open Source Directory for Uniswap v4 Hooks",
+        "details": "A community-curated collection of hooks implementations for Uniswap v4 that can be used in your project. Each hook is self-contained and can be used independently.",
+        "tags": ["defi", "uniswap", "uniswapv4", "solidity"]
+    },
+    {
+        "url": "https://blockchainheadhunter.com/",
+        "type": "platform",
+        "description": "Crypto | blockchain | web3 - Recruit or get hired",
+        "details": null,
+        "tags": ["work", "job"]
     }
 ]
