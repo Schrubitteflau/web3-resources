@@ -308,6 +308,13 @@
         "tags": ["learn", "roadmap", "evm"]
     },
     {
+        "url": "https://github.com/slowmist/SlowMist-Learning-Roadmap-for-Becoming-a-Smart-Contract-Auditor",
+        "type": "repository",
+        "description": "Smart contract audit skills roadmap for beginners, auditors, engineers, etc.",
+        "details": null,
+        "tags": ["learn", "roadmap", "security", "audit", "evm", "solidity"]
+    },
+    {
         "url": "https://web3.career/learn-web3/all",
         "type": "platform",
         "description": "Learn web3 - most recent web3 tutorials, courses, videos and articles",
