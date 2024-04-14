@@ -11,7 +11,7 @@
         "type": "repository",
         "description": "A list of FREE resources to make Web3 accessible to everyone.",
         "details": null,
-        "tags": []
+        "tags": ["learn"]
     },
     {
         "url": "https://github.com/ccxt/ccxt",
@@ -31,7 +31,7 @@
         "url": "https://tenderly.co/",
         "type": "platform",
         "description": "Enabling Web3 developers to build, test, monitor, and operate smart contracts from their inception to mass adoption.",
-        "details": "This example shows how the state has been alternated by a DEX buy transaction : https://dashboard.tenderly.co/tx/bsc/0x4c67c66b3566e787c52df8768f3b0eea67ed5133aaebeb362192cdb782ef30fd/state-diff",
+        "details": "This example shows how the state has been alternated by a DEX buy transaction: https://dashboard.tenderly.co/tx/bsc/0x4c67c66b3566e787c52df8768f3b0eea67ed5133aaebeb362192cdb782ef30fd/state-diff",
         "tags": ["evm", "debugger", "debug", "transaction_debug", "profiling", "simulate"]
     },
     {
@@ -203,6 +203,13 @@
         "tags": ["airdrop", "cosmos"]
     },
     {
+        "url": "https://paradigmxyz.github.io/advent-of-crypto-data/",
+        "type": "platform",
+        "description": "An advent calendar, but for crypto projects (as delicious as chocolate)",
+        "details": "Many of your favorite builders in the crypto data space have sync'd their release schedules for the holidays. There will be something new released each day from December 1st to 25th.",
+        "tags": ["build", "learn"]
+    },
+    {
         "url": "https://docs.google.com/spreadsheets/d/1oPq7dt6hsntvmAhgPc8H0pcbUnbi7V6kX-FIOOVmlOk",
         "type": "document",
         "description": "Crypto Funds - Master Contact List",
@@ -214,7 +221,7 @@
         "type": "document",
         "description": "Build a bunch of cool stuff, learn new tech, support the open source ecosystem, and earn cash and prizes!",
         "details": null,
-        "tags": ["hackathon", "build"]
+        "tags": ["hackathon", "build", "grant"]
     },
     {
         "url": "https://www.blockchain-council.org/",
@@ -308,6 +315,62 @@
         "tags": ["learn", "roadmap", "evm"]
     },
     {
+        "url": "https://app.alphascan.xyz/",
+        "type": "platform",
+        "description": "AlphaScan AI is a modular and decentralized alpha discovery platform coupled with a Telegram-based trading bot.",
+        "details": null,
+        "tags": ["analysis"]
+    },
+    {
+        "url": "https://docs.google.com/spreadsheets/d/1cQTQTQDC_glduX254-TDbwNsJ7jrCMTCxBtAlwz7yEA",
+        "type": "document",
+        "description": "Solana Airdrop Tracker",
+        "details": null,
+        "tags": ["solana", "airdrop"]
+    },
+    {
+        "url": "https://www.helius.dev/blog/a-hitchhikers-guide-to-solana-program-security",
+        "type": "article",
+        "description": "A Hitchhiker's Guide to Solana Program Security",
+        "details": null,
+        "tags": ["solana", "security"]
+    },
+    {
+        "url": "https://github.com/paradigmxyz/cryo",
+        "type": "repository",
+        "description": "cryo is the easiest way to extract blockchain data to parquet, csv, json, or python dataframes",
+        "details": null,
+        "tags": ["data", "analysis"]
+    },
+    {
+        "url": "https://libmev.com/",
+        "type": "platform",
+        "description": "libMEV is primarily designed to provide accurate MEV data",
+        "details": "A description can be found here: https://crypticwoods.com/blog/libmev-data-methodologies/",
+        "tags": ["evm", "mev", "analysis", "data"]
+    },
+    {
+        "url": "https://www.shadow.xyz/",
+        "type": "platform",
+        "description": "Deeper onchain data, done faster and cheaper.",
+        "details": "Get the exact data you need from any contract or transaction with gasless shadow events that have full access to the entire state of the chain. Shadow unlocks edit mode on any contract, giving you precise control over its event logs and view functions without affecting mainnet.",
+        "tags": ["evm", "data", "analysis"]
+    },
+    {
+        "url": "https://alliance.xyz/ideas",
+        "type": "article",
+        "description": "Crypto Startup Ideas",
+        "details": null,
+        "tags": ["entrepreneurship"]
+    },
+    {
+        "url": "https://www.jumpdest.dev/",
+        "type": "platform",
+        "description": "Web3 Interview Preparation",
+        "details": null,
+        "tags": ["learn", "work", "job", "challenges"]
+    },
+    {
         "url": "https://github.com/slowmist/SlowMist-Learning-Roadmap-for-Becoming-a-Smart-Contract-Auditor",
         "type": "repository",
         "description": "Smart contract audit skills roadmap for beginners, auditors, engineers, etc.",
@@ -371,6 +434,48 @@
         "tags": ["learn", "solidity", "evm", "security"]
     },
     {
+        "url": "https://thirdweb.com/",
+        "type": "library",
+        "description": "Full-stack, open-source web3 development platform",
+        "details": null,
+        "tags": ["build", "fullstack", "framework", "evm"]
+    },
+    {
+        "url": "https://faucetlink.to/",
+        "type": "tool",
+        "description": "Faucet Link is a directory of faucets for the Ethereum testnets",
+        "details": null,
+        "tags": ["evm", "faucet"]
+    },
+    {
+        "url": "https://beta.lumisat.io/",
+        "type": "platform",
+        "description": "Search the largest database of rare and desired satoshis",
+        "details": null,
+        "tags": ["bitcoin", "data", "analysis"]
+    },
+    {
+        "url": "https://sating.io/",
+        "type": "platform",
+        "description": "Hunt rare, interesting and special sats",
+        "details": null,
+        "tags": ["bitcoin", "data", "analysis"]
+    },
+    {
+        "url": "https://www.blockchaingrants.org/",
+        "type": "platform",
+        "description": "Funding for Your Blockchain Vision",
+        "details": "We aggregate all the companies that are providing grants to help the community support the blockchain dream of a trustless system, accessable to all.",
+        "tags": ["build", "grant", "hackathon"]
+    },
+    {
+        "url": "https://officercia.mirror.xyz/p1ieZdxQWH4yHCNOXNPHyT8So1cY0X_wMGKwdmavi7s",
+        "type": "article",
+        "description": "The Only Safe Way to Store Crypto",
+        "details": "An extensive guide on how to find a good way to securely store one's assets depending on one's situation. Can definitely give some ideas.",
+        "tags": ["security"]
+    },
+    {
         "url": "https://curious.xyz/",
         "type": "platform",
         "description": "Ask us anything related to Web3 – we'll answer within a day.",
@@ -416,7 +521,7 @@
         "url": "https://blog.bytes032.xyz/",
         "type": "blog",
         "description": "bytes032's alpha",
-        "details": "A very interesting article whose title is self-explanatory : https://blog.bytes032.xyz/p/how-to-break-into-web3-while-working-full-time-job",
+        "details": "A very interesting article whose title is self-explanatory: https://blog.bytes032.xyz/p/how-to-break-into-web3-while-working-full-time-job",
         "tags": ["various_topics", "evm", "audit"]
     },
     {
@@ -584,21 +689,21 @@
         "url": "https://hacken.io/",
         "type": "company",
         "description": "Hacken - Trusted blockchain security auditor",
-        "details": "Learn how to audit by reading their public audit reports : https://hacken.io/audits/",
+        "details": "Learn how to audit by reading their public audit reports: https://hacken.io/audits/",
         "tags": ["evm", "security", "audit", "services"]
     },
     {
         "url": "https://hashex.org/",
         "type": "company",
         "description": "HashEx is an experienced team of auditors, developers, and consultants that sets DeFi security standards.",
-        "details": "Learn how to audit by reading their public audit reports : https://hashex.org/audits/",
+        "details": "Learn how to audit by reading their public audit reports: https://hashex.org/audits/",
         "tags": ["evm", "security", "audit", "services"]
     },
     {
         "url": "https://github.com/spearbit/portfolio",
         "type": "repository",
         "description": "Public audit reports by Spearbit",
-        "details": "See the auditing company : https://spearbit.com/",
+        "details": "See the auditing company: https://spearbit.com/",
         "tags": ["evm", "security", "audit"]
     },
     {
