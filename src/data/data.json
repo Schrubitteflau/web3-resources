@@ -693,6 +693,13 @@
         "tags": ["evm", "security", "audit", "services"]
     },
     {
+        "url": "https://hats.finance/",
+        "type": "company",
+        "description": "Protect your protocol with the ultimate on-chain Audit Competitions and Bug Bounties",
+        "details": null,
+        "tags": ["evm", "security", "audit", "services"]
+    },
+    {
         "url": "https://hashex.org/",
         "type": "company",
         "description": "HashEx is an experienced team of auditors, developers, and consultants that sets DeFi security standards.",
