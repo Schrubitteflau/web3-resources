@@ -14,6 +14,13 @@
         "tags": ["learn"]
     },
     {
+        "url": "https://www.notion.so/cyphertux/3dd96dc300604eecae841013f3a0be17",
+        "type": "document",
+        "description": "Web3 Education x Bootcamp by CypherTux",
+        "details": null,
+        "tags": ["learn", "courses"]
+    },
+    {
         "url": "https://github.com/ccxt/ccxt",
         "type": "library",
         "description": "A JavaScript / TypeScript / Python / C# / PHP cryptocurrency trading API with support for more than 100 bitcoin/altcoin exchanges",
