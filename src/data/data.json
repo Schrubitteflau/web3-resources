@@ -693,6 +693,20 @@
         "tags": ["evm", "security", "audit", "services"]
     },
     {
+        "url": "https://hexens.io/",
+        "type": "company",
+        "description": "We go above and beyond expectations to secure digital assets and data. Our goal is to provide an incomparable experience when it comes to serving your CYBERSECURITY needs.",
+        "details": null,
+        "tags": ["evm", "security", "audit", "services"]
+    },
+    {
+        "url": "https://glide.r.xyz/",
+        "type": "tool",
+        "description": "Code query framework designed to run variant and data analysis on every smart contract",
+        "details": "See at https://hexens.io/",
+        "tags": ["evm", "security", "data", "audit", "analysis"]
+    },
+    {
         "url": "https://hacken.io/",
         "type": "company",
         "description": "Hacken - Trusted blockchain security auditor",
