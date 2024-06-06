@@ -700,6 +700,11 @@
         "tags": ["evm", "security", "audit", "services"]
     },
     {
+        "url": "https://ethroadmap.com/",
+        "type": "tool",
+        "description": "Up-to-date information on Ethereum's roadmap. It breaks down the sections into the Merge, Surge, Scourge, Verge, and Purge categories."
+    },
+    {
         "url": "https://glide.r.xyz/",
         "type": "tool",
         "description": "Code query framework designed to run variant and data analysis on every smart contract",
