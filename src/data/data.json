@@ -42,6 +42,13 @@
         "tags": ["evm", "debugger", "debug", "transaction_debug", "profiling", "simulate"]
     },
     {
+        "url": "https://explorer.sim.io/",
+        "type": "tool",
+        "description": "Build products and infrastructure on blockchain data without massive data or engineering teams",
+        "details": "You can for instance access a contract's state: https://explorer.sim.io/eth/20382371/0x5b1b5fea1b99d83ad479df0c222f0492385381dd#map",
+        "tags": ["evm", "debugger", "debug", "transaction_debug", "profiling", "simulate"]
+    },
+    {
         "url": "https://ethtx.info/",
         "type": "tool",
         "description": "EthTx is an open source decoder of blockchain transactions that is made freely available to the Ethereum Community as a Python library in public PyPi index (project page).",
